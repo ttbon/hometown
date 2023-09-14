@@ -1,0 +1,135 @@
+
+:root {
+    --color-offblue: #C8D6E6;
+    --color-offblack: #131813;
+    --color-tan: #B3A899;
+    --color-blue: #92BAE0;
+    --spacing-m: 30px;
+    --spacing-l: 60px;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+#hero { 
+    background-image: url("https://www.tokyoweekender.com/wp-content/uploads/2022/11/Meguro-River-and-Sky-Garden-Exterior.jpg");
+    /* make the background image start lower */
+    background-position: center 50%;
+    background-size: cover;
+    height: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+}
+
+h1 {
+    color: var(--color-offblack);
+    background-color: var(--color-blue);
+    border-radius: 10px;
+    padding: 4px 12px;
+
+}
+
+h2 {
+    color: var(--color-offblack);
+    background-color: var(--color-offblue);
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 4px 12px;
+}
+
+#activities-section {
+    color: var(--color-offblack);
+    background-image: linear-gradient(var(--color-offblue), var(--color-blue));
+    padding: var(--spacing-l) 5px;
+
+}
+
+#activities-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.activity {
+    margin: var(--spacing-m);
+    padding: 20px 10px 10px;
+    border-radius: 10px;
+    background-color: var(--color-tan);
+    width: 300px;
+}
+
+/* add a small offset and shadow to activity class on hover */
+.activity:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.activity img {
+
+    height: 100px;
+    width: 100px;
+    
+    border-radius: 50%;
+}
+
+hr {
+    margin: 0;
+    border-color: var(--color-offblack);
+}
+
+#guide-section{
+    background-image: linear-gradient(var(--color-blue), var(--color-offblue));
+    padding: var(--spacing-l) 0;
+}
+
+.guide-card {
+    margin: 40px auto;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guide-card img {
+    width: 180px;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+
+.italics {
+    font-style: italic;
+}
+
+/* create separate rules for mobile devices */
+@media (max-width: 600px) {
+
+    #activities-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .activity {
+        width: 250px;
+    }
+
+    .guide-card {
+        flex-direction: column;
+        width: 300px;
+    }
+
+    .guide-card img {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+}
